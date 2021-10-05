@@ -14,6 +14,8 @@ import { CheckOutComponent } from './check-out/check-out.component';
 import { UsuariosComponent } from './gestion/usuarios/usuarios.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './shared/header/header.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { HeaderComponent } from './shared/header/header.component';
     CarritoComponent,
     CheckOutComponent,
     UsuariosComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidebarComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
