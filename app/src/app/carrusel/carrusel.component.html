@@ -1,31 +1,22 @@
 <div class="col">
-    <ngb-carousel *ngIf="images" style="width: 100%;">
-        <ng-template ngbSlide style="width: 100%;">
-            <div class="picsum-img-wrapper">
-                <img src="assets/img/pantalonNegro.jpg" style="width: 100%; height: 800px;" alt="Random first slide">
+    <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide>
+            <div class="img1">
+                <img src="assets/img/pantalonNegro.jpg" style="width: 100%; height: 800px;" alt="img1">
             </div>
-            <div class="carousel-caption">
-                <!-- <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
-            </div>
+
         </ng-template>
         <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img src="assets/img/trioJeanBuzo.jpg" style="width: 100%;height: 800px;" alt="Random second slide">
+            <div class="img2">
+                <img src="assets/img/trioJeanBuzo.jpg" style="width: 100%;height: 800px;" alt="img2">
             </div>
-            <div class="carousel-caption">
-                <!-- <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-            </div>
+
         </ng-template>
         <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img src="assets/img/buzoManchadoRosa.jpg" style="width: 100%;height: 800px;" alt="Random third slide">
+            <div class=" img3 ">
+                <img src="assets/img/buzoManchadoRosa.jpg " style="width: 100%;height: 800px; " alt="img3 ">
             </div>
-            <div class="carousel-caption">
-                <!-- <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> -->
-            </div>
+
         </ng-template>
     </ngb-carousel>
 </div>

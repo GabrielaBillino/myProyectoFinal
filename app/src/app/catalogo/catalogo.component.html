@@ -1,10 +1,11 @@
 <div class="row">
     <div class="col-3" style="margin: 0%; margin-top: 15px;">
-        <app-sidebar></app-sidebar>
+        <app-sidebar (categoria)="lista($event)"></app-sidebar>
     </div>
     <div class="col-9 ">
         <div class="container ">
-            <router-outlet></router-outlet>
+            <app-lista-productos [vestimentas]="vestimentas"></app-lista-productos>
+
         </div>
     </div>
 </div>

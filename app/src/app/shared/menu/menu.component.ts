@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { CarritoComponent } from 'src/app/carrito/carrito.component';
 import { ContactoComponent } from 'src/app/contacto/contacto.component';
 
 @Component({
@@ -23,6 +24,9 @@ export class MenuComponent implements OnInit {
   }
   open() {
     const modalRef = this.modalService.open(ContactoComponent);
-    // modalRef.componentInstance.name = 'World';
+  }
+
+  openCarrito(){
+    const modalRef = this.modalService.open(CarritoComponent, { size: 'xl' });
   }
 }

@@ -1,0 +1,27 @@
+{
+    "vestimenta": [{
+            "id": 1,
+            "nombre": "Buzo Rosa",
+            "imagen": "assets/img/buzoManchadoRosa.jpg",
+            "precio": 2500,
+            "categoriaId": 1
+        },
+        {
+            "id": 2,
+            "nombre": "Pantalón Negro",
+            "imagen": "assets/img/pantalonNegro.jpg",
+            "precio": 2000,
+            "categoriaId": 2
+        }
+    ],
+
+    "categoria": [{
+            "id": 1,
+            "nombre": "Camisa & Blusa"
+        },
+        {
+            "id": 2,
+            "nombre": "Pantalon Dama"
+        }
+    ]
+}

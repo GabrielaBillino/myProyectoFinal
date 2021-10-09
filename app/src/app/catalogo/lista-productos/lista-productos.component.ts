@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { VestimentaService } from 'src/app/abm/vestimenta/vestimenta.service';
 
 @Component({
   selector: 'app-lista-productos',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-productos.component.css']
 })
 export class ListaProductosComponent implements OnInit {
-
-  constructor() { }
+  @Input() vestimentas: any;
+ 
+  termino="";
+  constructor(private vestimentaService : VestimentaService) { }
 
   ngOnInit(): void {
+   
+    
   }
- 
+
 }
