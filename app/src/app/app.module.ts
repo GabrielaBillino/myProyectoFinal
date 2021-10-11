@@ -16,7 +16,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductoDetalleComponent } from './catalogo/producto-detalle/producto-detalle.component';
 
 
 
@@ -35,6 +36,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     SidebarComponent,
     ContactoComponent,
+    ProductoDetalleComponent,
  
   ],
   imports: [
@@ -42,7 +44,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

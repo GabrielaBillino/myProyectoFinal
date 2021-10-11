@@ -3,43 +3,30 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Imagen</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Total</th>
-                    <th scope="col">Acción</th>
+                    <th scope="col" *ngFor="let item of columnas">{{item}}</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row"><img src="assets/img/pantalonNegro.jpg" style="width:100px; height:100px;"></th>
-                    <td>Pantalon Negro</td>
-                    <td>$500</td>
-                    <td>1</td>
-                    <td>$500</td>
-                    <td><button class="btn" name="pedido" style="background-color: rgb(223, 199, 245); margin-right: 10px;">Eliminar</button><button class="btn" name="pedido" style="background-color: rgb(223, 199, 245);">Editar</button></td>
-                </tr>
-                <tr>
-                    <th scope="row"><img src="assets/img/buzoManchadoRosa.jpg" style="width:100px; height:100px;"></th>
-                    <td>Buzo Fashion</td>
-                    <td>$500</td>
-                    <td>1</td>
-                    <td>$500</td>
-                    <td><button class="btn bi bi-trash" name="pedido" style="background-color: rgb(223, 199, 245); margin-right: 10px;">Eliminar</button><button class="btn" name="pedido" style="background-color: rgb(223, 199, 245);">Editar</button></td>
-                </tr>
-                <tr>
-                    <th scope="row"><img src="assets/img/trioJeanBuzo.jpg" style="width:100px; height:100px;"></th>
-                    <td>Pantalon Negro</td>
-                    <td>$500</td>
-                    <td>1</td>
-                    <td>$500</td>
-                    <td><button class="btn" name="pedido" style="background-color: rgb(223, 199, 245); margin-right: 10px;">Eliminar</button><button class="btn" name="pedido" style="background-color: rgb(223, 199, 245);">Editar</button></td>
+                <tr *ngFor="let producto of cartProduct">
+                    <td><img [src]="producto.imagen" style="width:100px; height:100px;"></td>
+                    <td>{{producto.nombre}}</td>
+                    <td>${{producto.precio}}</td>
+                    <td>
+                        <a (click)="sumarCantidad(producto)" class="btn btn-danger">+</a>
+                        <input type="text" [value]="producto.cantidad" style="width: 35px; margin: 2px 5px; text-align: center;">
+                        <a (click)="restarCantidad(producto)" class="btn btn-danger">-</a>
+                    </td>
+                    <td><button class="btn" name="eliminar" (click)="eliminar(producto)" style="background-color: rgb(223, 199, 245); margin-right: 10px;">Eliminar</button></td>
                 </tr>
             </tbody>
+            <tfoot>
+                <div id="total">
+                    <h6>Total: {{total}} $ </h6>
+                </div>
+            </tfoot>
         </table>
         <div class="mb-3">
-            <button class="btn" name="pedido" style="background-color: rgb(223, 199, 245);">Confirmar Pedido</button>
+            <button class="btn" name="pedido" style="background-color: rgb(223, 199, 245);" (click)="finalizarCompra()">Confirmar Compra</button>
         </div>
     </div>
 </div>

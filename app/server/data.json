@@ -4,14 +4,16 @@
             "nombre": "Buzo Rosa",
             "imagen": "assets/img/buzoManchadoRosa.jpg",
             "precio": 2500,
-            "categoriaId": 1
+            "categoriaId": 1,
+            "cantidad": 1
         },
         {
             "id": 2,
             "nombre": "Pantalón Negro",
             "imagen": "assets/img/pantalonNegro.jpg",
             "precio": 2000,
-            "categoriaId": 2
+            "categoriaId": 2,
+            "cantidad": 1
         }
     ],
 
