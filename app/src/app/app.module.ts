@@ -18,6 +18,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductoDetalleComponent } from './catalogo/producto-detalle/producto-detalle.component';
+import { OfertasComponent } from './shared/ofertas/ofertas.component';
+import { LoginComponent } from './gestion/login/login.component';
 
 
 
@@ -37,6 +39,8 @@ import { ProductoDetalleComponent } from './catalogo/producto-detalle/producto-d
     SidebarComponent,
     ContactoComponent,
     ProductoDetalleComponent,
+    OfertasComponent,
+    LoginComponent,
  
   ],
   imports: [

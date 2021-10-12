@@ -10,7 +10,7 @@ export class CarritoComponent implements OnInit {
     '',
     'Nombre',
     'Precio',
-    'cantidad',
+    'Cantidad',
     ''  
   ]
 
@@ -67,13 +67,15 @@ export class CarritoComponent implements OnInit {
         return element;
       }
     });
-
+    
     this.cartProduct = temp;
     }
+    sessionStorage.removeItem("vestimenta"+producto.id);
+
   }
 
   eliminar(producto: any){
-    sessionStorage.removeItem("producto"+producto.id);
+    sessionStorage.removeItem("vestimenta"+producto.id);
     const newItems = this.cartProduct.filter((item:any)=>{
       return item.id !== producto.id
     });

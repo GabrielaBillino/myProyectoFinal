@@ -26,12 +26,6 @@ export class ProductosComponent implements OnInit {
   ngOnInit(): void {
   }
  
-  filtrar(){
-    // let newVestimenta = this.vestimentas.filter(vestimenta => {
-    //   return vestimenta.categoriaId.toLowerCase().includes(this.termino.toLowerCase()) === true
-    // });
-    // this.vestimentas = newVestimenta;
-  }
   addItemCarrito(vestimenta:any){
     this.cartProduct.id = vestimenta.id;
     this.cartProduct.nombre = vestimenta.nombre;

@@ -15,13 +15,14 @@ export class CatalogoComponent implements OnInit {
 
   ngOnInit(): void {
     this.vestimentaService.getVestimentas().subscribe(response=> {
-      this.vestimentas = response;
-    this.backup= this.vestimentas;  
+    this.vestimentas = response;
+    this.backup= this.vestimentas; 
     })
+    
   }
 
   lista(id:number){
-   let lista = this.backup.filter((vestimenta:any) =>vestimenta.id == id)
+   let lista = this.backup.filter((vestimenta:any) =>vestimenta.categoriaId == id);
    this.vestimentas = lista;   
   }
 

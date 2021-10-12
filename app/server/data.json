@@ -4,7 +4,7 @@
             "nombre": "Buzo Rosa",
             "imagen": "assets/img/buzoManchadoRosa.jpg",
             "precio": 2500,
-            "categoriaId": 1,
+            "categoriaId": 3,
             "cantidad": 1
         },
         {
@@ -13,6 +13,62 @@
             "imagen": "assets/img/pantalonNegro.jpg",
             "precio": 2000,
             "categoriaId": 2,
+            "cantidad": 1
+        },
+        {
+            "id": 3,
+            "nombre": "Jean Dama",
+            "imagen": "assets/img/jeanBuzo.jpg",
+            "precio": 1500,
+            "categoriaId": 2,
+            "cantidad": 1
+        },
+        {
+            "id": 4,
+            "nombre": "Pantalón Mostaza",
+            "imagen": "assets/img/pantalonMostaza.jpg",
+            "precio": 1000,
+            "categoriaId": 2,
+            "cantidad": 1
+        },
+        {
+            "id": 5,
+            "nombre": "Buzo Cool",
+            "imagen": "assets/img/buzosVarios.jpg",
+            "precio": 800,
+            "categoriaId": 3,
+            "cantidad": 1
+        },
+        {
+            "id": 6,
+            "nombre": "Camisa Print",
+            "imagen": "assets/img/camisasVarias.jpg",
+            "precio": 800,
+            "categoriaId": 1,
+            "cantidad": 1
+        },
+        {
+            "id": 7,
+            "nombre": "Camisa Bird",
+            "imagen": "assets/img/camisaLadrillo.jpg",
+            "precio": 750,
+            "categoriaId": 1,
+            "cantidad": 1
+        },
+        {
+            "id": 8,
+            "nombre": "Buzo winter",
+            "imagen": "assets/img/buzoBlanco.jpg",
+            "precio": 750,
+            "categoriaId": 3,
+            "cantidad": 1
+        },
+        {
+            "id": 9,
+            "nombre": "Camisa new age",
+            "imagen": "assets/img/camisaDupla.jpg",
+            "precio": 750,
+            "categoriaId": 1,
             "cantidad": 1
         }
     ],
@@ -24,6 +80,10 @@
         {
             "id": 2,
             "nombre": "Pantalon Dama"
+        },
+        {
+            "id": 3,
+            "nombre": "Buzos & Abrigos"
         }
     ]
 }

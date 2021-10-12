@@ -8,7 +8,7 @@ import { VestimentaService } from 'src/app/abm/vestimenta/vestimenta.service';
 })
 export class ListaProductosComponent implements OnInit {
   @Input() vestimentas: any;
- 
+  
   termino="";
   constructor(private vestimentaService : VestimentaService) { }
 
