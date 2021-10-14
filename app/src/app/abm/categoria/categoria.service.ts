@@ -23,4 +23,8 @@ export class CategoriaService {
   putCategoria(categoria:any){
     return this._http.put(this.url+"/"+categoria.id,categoria);
   }
+
+  getById(id:number){
+    return this._http.get(this.url + "/" + id);
+  }
 }

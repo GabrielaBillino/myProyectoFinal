@@ -15,6 +15,21 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" style="color: white; font-size: 20px;" (click)="open()">Contacto</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; font-size: 20px;">
+                       Gestión </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="/gestion/lista-productos" href="#">Productos</a>
+
+                        </li>
+
+                        <li><a class="dropdown-item" routerLink="" href="#">Clientes</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#" routerLink="/gestion/usuario">Usuarios</a></li>
+                    </ul>
+                </li>
             </ul>
             <form class="d-flex">
                 <a href="" routerLink="/carrito" name="carrito" id="carrito"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="80" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16" style="float:right; color:rgb(255, 255, 255, 0.904); width:30px;">

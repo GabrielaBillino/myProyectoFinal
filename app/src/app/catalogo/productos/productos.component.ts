@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ToastService } from 'src/app/toast.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-productos',
@@ -19,8 +20,6 @@ export class ProductosComponent implements OnInit {
     "cantidad": 0
   }
 
-  show = false;
-
   constructor(private toastService: ToastService) { }
 
   ngOnInit(): void {
@@ -35,7 +34,14 @@ export class ProductosComponent implements OnInit {
     this.cartProduct.cantidad = vestimenta.cantidad;
     //seteo vestimenta en sessionStorage
     sessionStorage.setItem("vestimenta"+vestimenta.id,JSON.stringify(this.cartProduct));
-    this.show = true;
+ 
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Se agregó al carrito',
+      showConfirmButton: false,
+      timer: 1700
+    })
   }
 
  

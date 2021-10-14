@@ -1,1 +1,38 @@
-<p>productos works!</p>
+<div class="row" style="background-color:rgb(238, 226, 243);">
+    <form class="row g-3" style="margin: 10px;">
+        <h3>Alta-Producto</h3>
+        <div class=" col-8 " style="border: 1px solid; ">
+            <div class="col-md-6 ">
+                <label for="inputEmail4 " class="form-label ">Nombre</label>
+                <input type="text " class="form-control " id="inputNombre " (input)="handleNameInput($event)" [(ngModel)]="vestimenta.nombre" name="nombre">
+            </div>
+            <div class="col-8 ">
+                <label for="formFileMultiple " class="form-label ">Cargar la imagen del producto</label>
+                <input class="form-control " type="file " id="formFileMultiple " multiple>
+            </div>
+            <div class="col-8 ">
+                <label for="inputAddress " class="form-label ">Precio</label>
+                <input type="text " class="form-control " id="inputPrecio ">
+            </div>
+
+            <div class="col-md-4 ">
+                <label for="validationServer04" class="form-label">Categoria</label>
+                <select [(ngModel)]="selectedCategoria" (change)="changeCategoria()" class="form-select" id="validationServer04" name="categoria" aria-describedby="validationServer04Feedback" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option *ngFor="let item of categorias">{{item.nombre}}</option>
+                </select>
+                <div id="validationServer04Feedback" class="invalid-feedback">
+                    Por favor seleccione una Categoria.
+                </div>
+            </div>
+            <div class="col-8 ">
+                <br>
+                <button type="submit " class="btn btn-primary ">Guardar</button>
+            </div>
+        </div>
+        <div class="col-4 ">
+            <img src="/assets/img/pantalonesVariosPercha.jpg " style="width:250px; height: 350px; " class="card-img-top " alt="... ">
+        </div>
+    </form>
+
+</div>

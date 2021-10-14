@@ -1,22 +1,12 @@
 <div class="row">
     <div class="col-6">
-        <div class="card" style="width: 300px; margin-top: 10px;">
-            <button href="#" class="btn btn-light" style="width: 200px;"> <img [src]="vestimenta.imagen" style="width:200px; height: 250px;" class="card-img-top" alt="..."> </button>
+        <div class="card" style="width: 300px; margin-top: 5px;">
+            <!-- <button href="#" class="btn btn-light" style="width: 280px;"> <img [src]="vestimenta.imagen" style="width:280px; height: 300px;" class="card-img-top" alt="..."> </button> -->
+            <img [src]="vestimenta.imagen" style="width:298px; height: 300px;" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{vestimenta.nombre}}</h5>
                 <p class="card-text"><strong>$ {{vestimenta.precio}} </strong></p>
                 <button class="btn" style="background-color: rgb(223, 199, 245); margin-right: 10px;" href="#">Detalle</button><button class="btn" style="background-color: rgb(223, 199, 245)" href="#" (click)="addItemCarrito(vestimenta)">Agregar al carrito</button>
-
-                <ngb-toast *ngIf="show" [autohide]="false" (hidden)="show=false">
-                    <ng-template ngbToastHeader>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-                        <path
-                          d="M16.896 10l-4.896-8-4.896 8-7.104-4 3 11v5h18v-5l3-11-7.104 4zm-11.896 10v-2h14v2h-14zm14.2-4h-14.4l-1.612-5.909 4.615 2.598 4.197-6.857 4.197 6.857 4.615-2.598-1.612 5.909z" />
-                      </svg>
-                        <strong class="mx-1">Mensaje</strong>vestimenta
-                    </ng-template>
-                    Se agregó correctamente al carrito!!!
-                </ngb-toast>
             </div>
 
         </div>

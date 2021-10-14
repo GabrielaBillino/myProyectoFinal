@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-carrito',
@@ -75,13 +76,30 @@ export class CarritoComponent implements OnInit {
   }
 
   eliminar(producto: any){
-    sessionStorage.removeItem("vestimenta"+producto.id);
-    const newItems = this.cartProduct.filter((item:any)=>{
-      return item.id !== producto.id
-    });
-    this.cartProduct = newItems;
+    Swal.fire({
+      title: 'Seguro de eliminar?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Eliminar',
+      denyButtonText: `No eliminar`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Eliminar!', '', 'success');
 
-    this.total -= producto.cantidad*producto.precio;
+        sessionStorage.removeItem("vestimenta"+producto.id);
+        const newItems = this.cartProduct.filter((item:any)=>{
+         return item.id !== producto.id
+        });
+        this.cartProduct = newItems;
+        this.total -= producto.cantidad*producto.precio;
+
+      } else if (result.isDenied) {
+        Swal.fire('No se eliminó el producto', '', 'info')
+      }
+    })
+    
+    
 }
 
 finalizarCompra(){

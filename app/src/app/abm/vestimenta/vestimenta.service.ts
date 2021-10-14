@@ -24,4 +24,8 @@ export class VestimentaService {
   putVestimenta(vestimenta:any){
     return this._http.put(this.url+"/"+vestimenta.id,vestimenta);
   }
+
+  getById(id:number){
+    return this._http.get(this.url + "/" + id);
+  }
 }
