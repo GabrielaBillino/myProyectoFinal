@@ -3,7 +3,7 @@
         <div class="col-6">
             <form class="d-flex">
                 <h4>Gestion - Productos</h4>
-                <a class="btn btn-outline-primary" style="margin-left: 10px;" type="submit" (click)="openProducto()">Nuevo</a>
+                <a class="btn btn-outline-primary" style="margin-left: 10px;" type="submit" (click)="openProducto(vestimenta)">Nuevo</a>
             </form>
         </div>
     </div>
@@ -22,22 +22,15 @@
         <div class="col">
             <table class="table ">
                 <thead>
-                    <tr>
-                        <!-- <th scope="col" *ngFor="let item of columnas ">{{item}}</th> -->
-                        <th>*</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Categoria</th>
-
-                    </tr>
+                    <th scope="col" *ngFor="let item of columnas">{{item}}</th>
                 </thead>
                 <tbody>
                     <tr *ngFor="let vestimenta of vestimentas">
-                        <td><img [src]="vestimenta.imagen " style="width:100px; height:100px; "></td>
+                        <td><img [src]="vestimenta.imagen" style="width:100px; height:100px; "></td>
                         <td>{{vestimenta.nombre}}</td>
                         <td>${{vestimenta.precio}}</td>
-                        <td>{{producto.categoriaId.categoria.nombre}}</td>
-                        <td><button class="btn " name="eliminar " (click)="eliminar(producto) " style="background-color: rgb(223, 199, 245); margin-right: 10px; ">Eliminar</button><button class="btn " name="eliminar " (click)="eliminar(producto) " style="background-color: rgb(223, 199, 245); margin-right: 10px; ">Editar</button></td>
+                        <td><button class="btn " name="eliminar " (click)="eliminarProducto(vestimenta.id)" style="background-color: rgb(223, 199, 245); margin-right: 10px; ">Eliminar</button>
+                            <button class="btn " name="editar" (click)="openProducto(vestimenta)" style="background-color: rgb(223, 199, 245); margin-right: 10px;">Editar</button></td>
                     </tr>
                 </tbody>
 

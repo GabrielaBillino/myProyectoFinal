@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CarritoComponent } from 'src/app/carrito/carrito.component';
 import { ContactoComponent } from 'src/app/contacto/contacto.component';
+import { LoginComponent } from 'src/app/gestion/login/login.component';
 
 @Component({
   selector: 'app-menu',
@@ -10,7 +11,7 @@ import { ContactoComponent } from 'src/app/contacto/contacto.component';
 })
 export class MenuComponent implements OnInit {
   router:any;
-
+  login=true;
   constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
@@ -28,5 +29,9 @@ export class MenuComponent implements OnInit {
 
   openCarrito(){
     const modalRef = this.modalService.open(CarritoComponent, { size: 'xl' });
+  }
+
+  openLogin(){
+    const modalRef = this.modalService.open(LoginComponent, {size: 'sm'});
   }
 }

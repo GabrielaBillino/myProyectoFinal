@@ -3,7 +3,7 @@
             "id": 1,
             "nombre": "Buzo Rosa",
             "imagen": "assets/img/buzoManchadoRosa.jpg",
-            "precio": 2500,
+            "precio": 750,
             "categoriaId": 3,
             "cantidad": 1
         },
@@ -70,9 +70,16 @@
             "precio": 750,
             "categoriaId": 1,
             "cantidad": 1
+        },
+        {
+            "id": 10,
+            "nombre": "Pantalon Nube",
+            "imagen": "assets/img/pantalonNube.jpg",
+            "precio": 900,
+            "categoriaId": 0,
+            "cantidad": 1
         }
     ],
-
     "categoria": [{
             "id": 1,
             "nombre": "Camisa & Blusa"
@@ -85,5 +92,22 @@
             "id": 3,
             "nombre": "Buzos & Abrigos"
         }
+    ],
+    "user": [{
+        "id": 1,
+        "usuario": "Gabriela",
+        "roleId": 1,
+        "mail": "gabrielabillino@gmail.com",
+        "password": "pepe"
+    }],
+    "role": [{
+            "id": 1,
+            "nombre": "Admin"
+        },
+        {
+            "id": 2,
+            "nombre": "Usuario"
+        }
     ]
+
 }

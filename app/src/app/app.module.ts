@@ -8,6 +8,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { ListaProductosComponent } from './catalogo/lista-productos/lista-productos.component';
 import { ProductosComponent } from './catalogo/productos/productos.component';
+import { ProductosComponentR } from './gestion/productos/productos.component';
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { CheckOutComponent } from './check-out/check-out.component';
@@ -20,6 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductoDetalleComponent } from './catalogo/producto-detalle/producto-detalle.component';
 import { OfertasComponent } from './shared/ofertas/ofertas.component';
 import { LoginComponent } from './gestion/login/login.component';
+import { ListaProductosComponentGestion } from './gestion/productos/lista-productos/lista-productos.component';
+import { GestionImagenComponent } from './gestion/productos/gestion-imagen/gestion-imagen.component';
 
 
 
@@ -30,7 +33,9 @@ import { LoginComponent } from './gestion/login/login.component';
     FooterComponent,
     CatalogoComponent,
     ListaProductosComponent,
+    ListaProductosComponentGestion,
     ProductosComponent,
+    ProductosComponentR,
     CarruselComponent,
     CarritoComponent,
     CheckOutComponent,
@@ -41,6 +46,7 @@ import { LoginComponent } from './gestion/login/login.component';
     ProductoDetalleComponent,
     OfertasComponent,
     LoginComponent,
+    GestionImagenComponent,
  
   ],
   imports: [
