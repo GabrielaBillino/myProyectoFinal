@@ -77,40 +77,39 @@ export class CarritoComponent implements OnInit {
 
   eliminar(producto: any){
     Swal.fire({
-      title: 'Seguro de eliminar?',
-      showDenyButton: true,
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Eliminar',
-      denyButtonText: `No eliminar`,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, eliminar!'
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        Swal.fire('Eliminar!', '', 'success');
-
+        Swal.fire(
+          'Eliminado!',
+          'El producto fue eliminado del carrito.',
+          'success'
+        )
         sessionStorage.removeItem("vestimenta"+producto.id);
         const newItems = this.cartProduct.filter((item:any)=>{
          return item.id !== producto.id
         });
         this.cartProduct = newItems;
         this.total -= producto.cantidad*producto.precio;
-
-      } else if (result.isDenied) {
-        Swal.fire('No se eliminó el producto', '', 'info')
       }
     })
-    
-    
-}
+  }
 
-finalizarCompra(){
-  this.total = 0;
-  this.monto = 0;
-  this.cartProduct = [];
-  this.products.forEach((el:any)  => {
-    sessionStorage.removeItem(el);
-  });
-  this.products = [];
-}
+  finalizarCompra(){
+    this.total = 0;
+    this.monto = 0;
+    this.cartProduct = [];
+    this.products.forEach((el:any)  => {
+      sessionStorage.removeItem(el);
+    });
+    this.products = [];
+  }
 
 
 }

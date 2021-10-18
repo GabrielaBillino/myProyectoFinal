@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CarritoComponent } from 'src/app/carrito/carrito.component';
 import { ContactoComponent } from 'src/app/contacto/contacto.component';
@@ -11,10 +11,27 @@ import { LoginComponent } from 'src/app/gestion/login/login.component';
 })
 export class MenuComponent implements OnInit {
   router:any;
-  login=true;
+  islogin=false;
+  nombreLogueado="";
+  usuariosLog: string[] = []
+ 
   constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
+    this.usuariosLog = Object.keys(sessionStorage);
+  
+    this.usuariosLog.forEach((el:any)  => {
+      const item = sessionStorage.getItem(el);
+      console.log("item session!!", item)
+      if (item !== null) {
+        let obj = JSON.parse(item);
+        this.nombreLogueado = obj[0].nombre;
+      }
+      if (this.nombreLogueado !== null) {
+        this.islogin=true;
+      }
+    });
+    
   }
   openNewTab() {
     const url = this.router.serializeUrl(
@@ -25,6 +42,7 @@ export class MenuComponent implements OnInit {
   }
   open() {
     const modalRef = this.modalService.open(ContactoComponent);
+    
   }
 
   openCarrito(){

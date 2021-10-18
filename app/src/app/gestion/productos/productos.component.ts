@@ -47,8 +47,6 @@ export class ProductosComponentR implements OnInit {
     for (let index = 0; index < this.categorias.length; index++) {
       if (this.categorias[index].nombre === this.selectedCategoria) {
         this.vestimenta.categoriaId = index+1;
-        console.log("categoriaID", this.vestimenta.categoriaId);
-        console.log("Soy la vestimenta", this.vestimenta);
       }      
     }
     this.categoria_valid =  "is-valid";    
@@ -98,8 +96,7 @@ export class ProductosComponentR implements OnInit {
           timer: 1700
         })
       })
-    }
-   
+    }  
   }
 
  

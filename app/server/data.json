@@ -95,7 +95,7 @@
     ],
     "user": [{
         "id": 1,
-        "usuario": "Gabriela",
+        "nombre": "Gabriela",
         "roleId": 1,
         "mail": "gabrielabillino@gmail.com",
         "password": "pepe"
