@@ -42,7 +42,7 @@ export class MenuComponent implements OnInit {
   }
   open() {
     const modalRef = this.modalService.open(ContactoComponent);
-    
+   
   }
 
   openCarrito(){

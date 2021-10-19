@@ -1,1 +1,36 @@
-<p>usuarios works!</p>
+<div class="row" style="background-color:rgb(238, 226, 243); border: 1px solid;">
+    <form class="row g-8" style="margin: 10px;">
+        <h3>{{title}}</h3>
+        <div class="col-6" style="border: 1px solid; ">
+            <div class="col-6">
+                <label for="inputEmail4 " class="form-label ">Nombre</label>
+                <input type="text " class="form-control " id="inputNombre " (input)="handleNameInput($event)" [(ngModel)]="user.nombre" name="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Mail </label>
+                <input type="mail " class="form-control " id="inputMail" (input)="handleMailInput($event)" [(ngModel)]="user.mail" name="mail">
+
+            </div>
+            <div class="col-4">
+                <label for="inputAddress " class="form-label ">Contraseña</label>
+                <input type="text" class="form-control " id="inputPass" (input)="handlePassInput($event)" [(ngModel)]="user.password" name="pass">
+            </div>
+            <div class="col-6">
+                <label for="validationServer04" class="form-label">Role</label>
+                <select class="form-select {{role_valid}}" id="validationServer04" [(ngModel)]="selectedRole" (change)="changeRole()" name="role" aria-describedby="validationServer04Feedback" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option *ngFor="let item of roles">{{item.nombre}}</option>
+                </select>
+                <div id="validationServer04Feedback" class="invalid-feedback">
+                    Por favor seleccione un role.
+                </div>
+            </div>
+            <div class="col-6">
+                <br>
+                <button type="submit " class="btn btn-primary " (click)=guardar()>Guardar</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>

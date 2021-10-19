@@ -76,7 +76,5 @@ export class ListaProductosComponentGestion implements OnInit {
     })
   }
 
-  editarVestimenta(id:any){
-
-  }
+  
 }

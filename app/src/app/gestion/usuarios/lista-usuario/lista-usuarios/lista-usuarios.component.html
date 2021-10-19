@@ -1,0 +1,41 @@
+<div class="container" style="margin-top: 40px;">
+    <div class="row">
+        <div class="col-6">
+            <form class="d-flex">
+                <h4>Gestion - Usuarios</h4>
+                <a class="btn btn-outline-primary" style="margin-left: 10px;" type="submit" (click)="openUser(user)">Nuevo</a>
+            </form>
+        </div>
+    </div>
+
+    <br>
+    <div class="row">
+        <div class="col-6">
+            <form class="d-flex">
+                <input autocomplete="off" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="button">Search</button>
+            </form>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <table class="table table-hover">
+                <thead>
+                    <th scope="col" *ngFor="let item of columnas">{{item}}</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of usuarios">
+                        <td>{{user.nombre}}</td>
+                        <td>{{user.mail}}</td>
+                        <td>{{user.password}}</td>
+                        <td>{{user.roleId}}</td>
+                        <td><button class="btn " name="eliminar " (click)="eliminarUser(user.id)" style="background-color: rgb(223, 199, 245); margin-right: 10px; ">Eliminar</button>
+                            <button class="btn " name="editar" (click)="openUser(user)" style="background-color: rgb(223, 199, 245); margin-right: 10px;">Editar</button></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

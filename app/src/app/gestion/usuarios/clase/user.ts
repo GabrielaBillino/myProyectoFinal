@@ -1,14 +1,14 @@
 export class User {
     mail: string;
     password: string;
-    role: string;
+    roleId: number;
     nombre: string;
     id:number;
 
     constructor(){
         this.mail="";
         this.password="";
-        this.role="";
+        this.roleId=0;
         this.nombre="";
         this.id=0;
     }

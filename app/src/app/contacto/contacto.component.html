@@ -3,18 +3,18 @@
     <div class="col-10" style="margin-left:25px">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-            <input type="texto" class="form-control" id="exampleFormControlInput1" placeholder="">
+            <input type="texto" class="form-control" id="exampleFormControlInput1" placeholder="" [(ngModel)]="contacto.nombre" name="nombre">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Correo Electronico</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" [(ngModel)]="contacto.mail" name="mail">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="contacto.mje" name="mje"></textarea>
         </div>
         <div class="mb-3">
-            <button class="btn" name="enviarMge" style="background-color: rgb(223, 199, 245);">Enviar</button>
+            <button class="btn" name="enviarMge" style="background-color: rgb(223, 199, 245);" (click)="enviarMje()">Enviar</button>
         </div>
     </div>
 </div>

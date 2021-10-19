@@ -23,6 +23,7 @@ import { OfertasComponent } from './shared/ofertas/ofertas.component';
 import { LoginComponent } from './gestion/login/login.component';
 import { ListaProductosComponentGestion } from './gestion/productos/lista-productos/lista-productos.component';
 import { GestionImagenComponent } from './gestion/productos/gestion-imagen/gestion-imagen.component';
+import { ListaUsuariosComponent } from './gestion/usuarios/lista-usuario/lista-usuarios/lista-usuarios.component';
 
 
 
@@ -47,6 +48,7 @@ import { GestionImagenComponent } from './gestion/productos/gestion-imagen/gesti
     OfertasComponent,
     LoginComponent,
     GestionImagenComponent,
+    ListaUsuariosComponent,
  
   ],
   imports: [

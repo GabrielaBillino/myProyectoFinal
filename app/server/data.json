@@ -1,113 +1,138 @@
 {
-    "vestimenta": [{
-            "id": 1,
-            "nombre": "Buzo Rosa",
-            "imagen": "assets/img/buzoManchadoRosa.jpg",
-            "precio": 750,
-            "categoriaId": 3,
-            "cantidad": 1
-        },
-        {
-            "id": 2,
-            "nombre": "Pantalón Negro",
-            "imagen": "assets/img/pantalonNegro.jpg",
-            "precio": 2000,
-            "categoriaId": 2,
-            "cantidad": 1
-        },
-        {
-            "id": 3,
-            "nombre": "Jean Dama",
-            "imagen": "assets/img/jeanBuzo.jpg",
-            "precio": 1500,
-            "categoriaId": 2,
-            "cantidad": 1
-        },
-        {
-            "id": 4,
-            "nombre": "Pantalón Mostaza",
-            "imagen": "assets/img/pantalonMostaza.jpg",
-            "precio": 1000,
-            "categoriaId": 2,
-            "cantidad": 1
-        },
-        {
-            "id": 5,
-            "nombre": "Buzo Cool",
-            "imagen": "assets/img/buzosVarios.jpg",
-            "precio": 800,
-            "categoriaId": 3,
-            "cantidad": 1
-        },
-        {
-            "id": 6,
-            "nombre": "Camisa Print",
-            "imagen": "assets/img/camisasVarias.jpg",
-            "precio": 800,
-            "categoriaId": 1,
-            "cantidad": 1
-        },
-        {
-            "id": 7,
-            "nombre": "Camisa Bird",
-            "imagen": "assets/img/camisaLadrillo.jpg",
-            "precio": 750,
-            "categoriaId": 1,
-            "cantidad": 1
-        },
-        {
-            "id": 8,
-            "nombre": "Buzo winter",
-            "imagen": "assets/img/buzoBlanco.jpg",
-            "precio": 750,
-            "categoriaId": 3,
-            "cantidad": 1
-        },
-        {
-            "id": 9,
-            "nombre": "Camisa new age",
-            "imagen": "assets/img/camisaDupla.jpg",
-            "precio": 750,
-            "categoriaId": 1,
-            "cantidad": 1
-        },
-        {
-            "id": 10,
-            "nombre": "Pantalon Nube",
-            "imagen": "assets/img/pantalonNube.jpg",
-            "precio": 900,
-            "categoriaId": 0,
-            "cantidad": 1
-        }
-    ],
-    "categoria": [{
-            "id": 1,
-            "nombre": "Camisa & Blusa"
-        },
-        {
-            "id": 2,
-            "nombre": "Pantalon Dama"
-        },
-        {
-            "id": 3,
-            "nombre": "Buzos & Abrigos"
-        }
-    ],
-    "user": [{
-        "id": 1,
-        "nombre": "Gabriela",
-        "roleId": 1,
-        "mail": "gabrielabillino@gmail.com",
-        "password": "pepe"
-    }],
-    "role": [{
-            "id": 1,
-            "nombre": "Admin"
-        },
-        {
-            "id": 2,
-            "nombre": "Usuario"
-        }
-    ]
-
+  "vestimenta": [
+    {
+      "id": 1,
+      "nombre": "Buzo Rosa",
+      "imagen": "assets/img/buzoManchadoRosa.jpg",
+      "precio": 750,
+      "categoriaId": 3,
+      "cantidad": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Pantalón Negro",
+      "imagen": "assets/img/pantalonNegro.jpg",
+      "precio": 2000,
+      "categoriaId": 2,
+      "cantidad": 1
+    },
+    {
+      "id": 3,
+      "nombre": "Jean Dama",
+      "imagen": "assets/img/jeanBuzo.jpg",
+      "precio": 1500,
+      "categoriaId": 2,
+      "cantidad": 1
+    },
+    {
+      "id": 4,
+      "nombre": "Pantalón Mostaza",
+      "imagen": "assets/img/pantalonMostaza.jpg",
+      "precio": 1000,
+      "categoriaId": 2,
+      "cantidad": 1
+    },
+    {
+      "id": 5,
+      "nombre": "Buzo Cool",
+      "imagen": "assets/img/buzosVarios.jpg",
+      "precio": 800,
+      "categoriaId": 3,
+      "cantidad": 1
+    },
+    {
+      "id": 6,
+      "nombre": "Camisa Print",
+      "imagen": "assets/img/camisasVarias.jpg",
+      "precio": 800,
+      "categoriaId": 1,
+      "cantidad": 1
+    },
+    {
+      "id": 7,
+      "nombre": "Camisa Bird",
+      "imagen": "assets/img/camisaLadrillo.jpg",
+      "precio": 750,
+      "categoriaId": 1,
+      "cantidad": 1
+    },
+    {
+      "id": 8,
+      "nombre": "Buzo winter",
+      "imagen": "assets/img/buzoBlanco.jpg",
+      "precio": 750,
+      "categoriaId": 3,
+      "cantidad": 1
+    },
+    {
+      "id": 9,
+      "nombre": "Camisa new age",
+      "imagen": "assets/img/camisaDupla.jpg",
+      "precio": 750,
+      "categoriaId": 1,
+      "cantidad": 1
+    },
+    {
+      "id": 10,
+      "nombre": "Pantalon Nube",
+      "imagen": "assets/img/pantalonNube.jpg",
+      "precio": 900,
+      "categoriaId": 0,
+      "cantidad": 1
+    }
+  ],
+  "categoria": [
+    {
+      "id": 1,
+      "nombre": "Camisa & Blusa"
+    },
+    {
+      "id": 2,
+      "nombre": "Pantalon Dama"
+    },
+    {
+      "id": 3,
+      "nombre": "Buzos & Abrigos"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "nombre": "Gabriela",
+      "roleId": 1,
+      "mail": "gabrielabillino@gmail.com",
+      "password": "pepe"
+    },
+    {
+      "id": 2,
+      "nombre": "Fede",
+      "roleId": 1,
+      "mail": "tobby@gmail.com",
+      "password": "tobby"
+    }
+  ],
+  "role": [
+    {
+      "id": 1,
+      "nombre": "Admin"
+    },
+    {
+      "id": 2,
+      "nombre": "Usuario"
+    }
+  ],
+  "contacto": [
+    {
+      "id": 1,
+      "nombre": "Fede",
+      "mail": "gabrielabillino@gmail.com",
+      "mje": "Es muy linda tu web!!"
+    },
+    {
+      "id": 2,
+      "nombre": "Tobby",
+      "mail": "tobby@gmail.com",
+      "mje": "guau- guau"
+    }
+  ]
 }
