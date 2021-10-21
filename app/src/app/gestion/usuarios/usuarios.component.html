@@ -1,7 +1,7 @@
-<div class="row" style="background-color:rgb(238, 226, 243); border: 1px solid;">
-    <form class="row g-8" style="margin: 10px;">
+<div class="row" style="background-color:rgb(238, 226, 243);">
+    <form class="row" style="margin: 10px; ">
         <h3>{{title}}</h3>
-        <div class="col-6" style="border: 1px solid; ">
+        <div class="col-6" style="border: 1px solid; width: 95%; ">
             <div class="col-6">
                 <label for="inputEmail4 " class="form-label ">Nombre</label>
                 <input type="text " class="form-control " id="inputNombre " (input)="handleNameInput($event)" [(ngModel)]="user.nombre" name="nombre">
@@ -11,7 +11,7 @@
                 <input type="mail " class="form-control " id="inputMail" (input)="handleMailInput($event)" [(ngModel)]="user.mail" name="mail">
 
             </div>
-            <div class="col-4">
+            <div class="col-6">
                 <label for="inputAddress " class="form-label ">Contraseña</label>
                 <input type="text" class="form-control " id="inputPass" (input)="handlePassInput($event)" [(ngModel)]="user.password" name="pass">
             </div>
@@ -27,7 +27,8 @@
             </div>
             <div class="col-6">
                 <br>
-                <button type="submit " class="btn btn-primary " (click)=guardar()>Guardar</button>
+                <button type="submit " class="btn btn-primary " (click)=guardar() style="margin-bottom:20px;">Guardar</button>
+                <br>
             </div>
         </div>
 

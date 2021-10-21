@@ -24,6 +24,11 @@ import { LoginComponent } from './gestion/login/login.component';
 import { ListaProductosComponentGestion } from './gestion/productos/lista-productos/lista-productos.component';
 import { GestionImagenComponent } from './gestion/productos/gestion-imagen/gestion-imagen.component';
 import { ListaUsuariosComponent } from './gestion/usuarios/lista-usuario/lista-usuarios/lista-usuarios.component';
+import { Error404Component } from './shared/notFound/error404/error404.component';
+import { ClienteComponent } from './gestion/clientes/cliente/cliente.component';
+import { ListadoClientesComponent } from './gestion/clientes/listado-clientes/listado-clientes.component';
+import { PedidoComponent } from './carrito/pedido/pedidoComponentes/pedido/pedido.component';
+import { ListadoPedidoComponent } from './carrito/pedido/pedidoComponentes/listado-pedido/listado-pedido.component';
 
 
 
@@ -49,6 +54,12 @@ import { ListaUsuariosComponent } from './gestion/usuarios/lista-usuario/lista-u
     LoginComponent,
     GestionImagenComponent,
     ListaUsuariosComponent,
+    Error404Component,
+    ClienteComponent,
+    ListadoClientesComponent,
+    PedidoComponent,
+    ListadoPedidoComponent
+   
  
   ],
   imports: [

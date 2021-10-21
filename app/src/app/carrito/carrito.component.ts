@@ -102,13 +102,16 @@ export class CarritoComponent implements OnInit {
   }
 
   finalizarCompra(){
-    this.total = 0;
-    this.monto = 0;
-    this.cartProduct = [];
-    this.products.forEach((el:any)  => {
-      sessionStorage.removeItem(el);
-    });
-    this.products = [];
+    console.log("catProduct", this.cartProduct);
+    
+    // this.total = 0;
+    // this.monto = 0;
+    // this.cartProduct = [];
+    // this.products.forEach((el:any)  => {
+    //   sessionStorage.removeItem(el);
+    // });
+    // this.products = [];
+    
   }
 
 

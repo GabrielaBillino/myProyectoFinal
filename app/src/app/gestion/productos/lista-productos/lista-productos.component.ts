@@ -41,7 +41,7 @@ export class ListaProductosComponentGestion implements OnInit {
   }
   
   openProducto(vestimenta:any){
-    const modalRef = this.modalService.open(ProductosComponentR, { size: 'xl' });
+    const modalRef = this.modalService.open(ProductosComponentR, { size: 'lg' });
     modalRef.componentInstance.vestimenta = vestimenta;
   }
 

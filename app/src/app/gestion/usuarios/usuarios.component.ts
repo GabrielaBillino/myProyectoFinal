@@ -41,6 +41,9 @@ export class UsuariosComponent implements OnInit {
       this.title ="Alta - Usuario";
     }else{
       this.title = "Editar - Usuario";
+      this.selectedRole = this.roles.filter((item:any) =>{
+        return item.id === this.user.roleId;
+      })[0].nombre;
     }
   }
   changeRole(){

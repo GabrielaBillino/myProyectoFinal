@@ -34,14 +34,17 @@ export class ProductosComponentR implements OnInit {
   ngOnInit(): void {
     this.categoriaService.getCategorias().subscribe(response => {
       this.categorias = response;
-      console.log("categoria", this.categorias);
       this.backup = this.categorias;
-    });
-    if(this.vestimenta.id ===0){
-      this.title ="Alta - Producto";
+      if(this.vestimenta.id ===0){
+        this.title ="Alta - Producto";
     }else{
+      this.selectedCategoria = this.categorias.filter((item:any) =>{
+        return item.id === this.vestimenta.categoriaId
+      })[0].nombre;
       this.title = "Editar - Producto";
     }
+    });
+
   }
   changeCategoria(){
     for (let index = 0; index < this.categorias.length; index++) {

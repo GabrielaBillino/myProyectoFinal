@@ -4,6 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { RolesService } from 'src/app/abm/roles.service';
 import Swal from 'sweetalert2';
 import { UserServService } from '../usuarios/servicio/user-serv.service';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +17,7 @@ export class LoginComponent implements OnInit {
   backupRole: any;
   selectedRol="";
   roles:any;
+  
   usuario={
     "id": 0,
     "nombre": "",
@@ -23,7 +25,13 @@ export class LoginComponent implements OnInit {
     "mail": "",
     "password": ""
   }
-  constructor(private userService: UserServService, private modalService: NgbModal, private roleService: RolesService) { 
+  userLogin={
+    "id": 0,
+    "nombre": "",
+    "password": ""
+  }
+  nombreLogueado="";
+  constructor(private userService: UserServService, private modalService: NgbModal, private roleService: RolesService, private loginService: LoginService) { 
 
   }
 
@@ -31,24 +39,32 @@ export class LoginComponent implements OnInit {
     this.userService.getUser().subscribe((response) => {
       this.usuarios= response;
       this.backup= this.usuarios;
-      console.log("Soy los usuarios", this.usuarios);
+      
     });
     this.roleService.getRole().subscribe((response:any) => {
       this.roles= response;
       this.backupRole= this.roles;
       })
   }
-  login(nombreLogin:any){
-    let userTemp = this.backup.filter((response:any) => response.nombre === nombreLogin);
-      if (userTemp.length > 0 ){
-        Swal.fire({
-          position: 'top-end',
-          icon: 'success',
-          title: 'Se logueo correctamente',
-          showConfirmButton: false,
-          timer: 1700
-        })
-        sessionStorage.setItem(nombreLogin,JSON.stringify(userTemp));
+  login(){
+    let userTemp = this.backup.find((response:any) => response.nombre === this.usuario.nombre && response.password === this.usuario.password);
+    console.log("userTemp", userTemp);  
+    if (userTemp !== null){
+
+        this.userLogin.nombre = this.usuario.nombre;
+        this.userLogin.password = this.usuario.password;
+        this.loginService.login(this.userLogin).subscribe(response => {
+          this.loginService.setUser(response);
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Se logueo correctamente',
+            showConfirmButton: false,
+            timer: 1700
+          })
+          console.log(this.loginService.getUser());
+        });
+      
       }else{
         Swal.fire({
           position: 'top-end',
@@ -58,9 +74,17 @@ export class LoginComponent implements OnInit {
           timer: 1700
       })} 
   }
-     
+  
+
   registro(){
-    this.userService.postUser(this.usuarios).subscribe(data =>{
+    
+    if(this.usuario.roleId ===0){
+      this.usuario.roleId=1;
+    }else{
+      this.usuario.roleId=2;
+    }  
+    
+    this.userService.postUser(this.usuario).subscribe(data =>{
       Swal.fire({
         position: 'top-end',
         icon: 'success',

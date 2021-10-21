@@ -8,6 +8,9 @@ import { OfertasComponent } from './shared/ofertas/ofertas.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { ProductosComponentR } from './gestion/productos/productos.component';
 import { ListaUsuariosComponent } from './gestion/usuarios/lista-usuario/lista-usuarios/lista-usuarios.component';
+import { Error404Component } from './shared/notFound/error404/error404.component';
+import { LoginComponent } from './gestion/login/login.component';
+import { CheckOutComponent } from './check-out/check-out.component';
 
 const routes: Routes = [
   {path: 'catalogo', component: CatalogoComponent      
@@ -18,7 +21,10 @@ const routes: Routes = [
   {path: 'carrito', component: CarritoComponent},
   {path: 'gestion/lista-productos', component: ListaProductosComponentGestion},
   {path: 'gestion/lista-usuario', component: ListaUsuariosComponent},
-  {path: 'gestion/nuevo-producto', component: ProductosComponentR}  
+  {path: 'gestion/nuevo-producto', component: ProductosComponentR},
+  {path: '***', component: Error404Component},
+  {path: 'login', component: LoginComponent},
+  {path: 'check-out', component: CheckOutComponent}  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

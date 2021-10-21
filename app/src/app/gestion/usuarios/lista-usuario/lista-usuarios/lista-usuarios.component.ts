@@ -41,7 +41,7 @@ export class ListaUsuariosComponent implements OnInit {
   }
   
   openUser(user:any){
-    const modalRef = this.modalService.open(UsuariosComponent, { size: 'xl' });
+    const modalRef = this.modalService.open(UsuariosComponent);
     modalRef.componentInstance.user = user;
   }
 

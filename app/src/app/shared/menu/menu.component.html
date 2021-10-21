@@ -15,7 +15,8 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" style="color: white; font-size: 20px;" (click)="open()">Contacto</a>
                 </li>
-                <li class="nav-item dropdown" *ngIf="islogin">
+                <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown" *ngIf="isLogin()"> -->
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; font-size: 20px;">
                        Gestión </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -32,10 +33,10 @@
                 </li>
             </ul>
             <div style="color: white; font-size: 20px; margin-right: 40px;">
-                <p>{{nombreLogueado}}</p>
+                <h5>{{this.loginService.getUser() !== undefined ? this.loginService.getUser().nombre : ''}}</h5>
             </div>
             <div>
-                <button class="btn btn-outline-light" name="login" type="button" style="color: white; font-size: 20px; background-color: rgb(196, 142, 246); width:80px; height:43px; margin-right: 50px;" (click)=openLogin()>Login</button>
+                <button class="btn btn-outline-light" name="login" type="button" style="color: white; font-size: 20px; background-color: rgb(196, 142, 246); width:80px; height:43px; margin-right: 50px;" routerLink="/login">Login</button>
             </div>
             <form class="d-flex">
 

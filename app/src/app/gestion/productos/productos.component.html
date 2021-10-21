@@ -1,21 +1,21 @@
 <div class="row" style="background-color:rgb(238, 226, 243);">
     <form class="row g-8" style="margin: 10px;">
         <h3>{{title}}</h3>
-        <div class="col-6" style="border: 1px solid; ">
-            <div class="col-6">
+        <div class="col-7" style="border: 1px solid; ">
+            <div class="col-7">
                 <label for="inputEmail4 " class="form-label ">Nombre</label>
                 <input type="text " class="form-control " id="inputNombre " (input)="handleNameInput($event)" [(ngModel)]="vestimenta.nombre" name="nombre">
             </div>
-            <div class="mb-3">
+            <div class="col-12">
                 <label for="formFile" class="form-label">Cargar imagen </label>
                 <input class="form-control" type="file" id="formFile" (change)="capturarImg($event)" [(ngModel)]="vestimenta.imagen" name="imagen">
 
             </div>
-            <div class="col-4">
+            <div class="col-3">
                 <label for="inputAddress " class="form-label ">Precio</label>
                 <input type="number" class="form-control " id="inputPrecio" (input)="handlePrecioInput($event)" [(ngModel)]="vestimenta.precio" name="precio">
             </div>
-            <div class="col-4">
+            <div class="col-3">
                 <label for="inputAddress " class="form-label">Cantidad</label>
                 <input type="number" class="form-control " id="inputCantidad" [(ngModel)]="vestimenta.cantidad" name="cantidad">
             </div>
@@ -30,12 +30,12 @@
                     Por favor seleccione una Categoria.
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6" style="margin-bottom: 10px;">
                 <br>
                 <button type="submit " class="btn btn-primary " (click)=guardar()>Guardar</button>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-5">
             <img src="/assets/img/pantalonesVariosPercha.jpg " style="width:250px; height: 350px; " class="card-img-top " alt="... ">
         </div>
     </form>

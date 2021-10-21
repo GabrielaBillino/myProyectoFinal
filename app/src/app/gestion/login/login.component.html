@@ -1,5 +1,5 @@
-<div class="row">
-    <div class="col-md-6 mx-auto p-0">
+<div class="row" style="margin-left: 250px">
+    <div class="col">
         <div class="card">
             <div class="login-box">
                 <div class="login-snip"> <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrarse</label>
@@ -8,7 +8,7 @@
                             <div class="group"> <label for="user" class="label">Username</label> <input id="user" type="text" class="input" placeholder="Enter your username" [(ngModel)]="usuario.nombre" name="nombre"> </div>
                             <div class="group"> <label for="pass" class="label">Password</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Enter your password" [(ngModel)]="usuario.password" name="pass"> </div>
                             <div class="group"> <input id="check" type="checkbox" class="check" checked> <label for="check"><span class="icon"></span> Keep me Signed in</label> </div>
-                            <div class="group"> <button type="button" class="button" value="Sign In" (click)="login(usuario.nombre)">Login</button> </div>
+                            <div class="group"> <button type="button" class="button" value="Sign In" (click)="login()">Login</button> </div>
                             <div class="hr"></div>
 
                         </div>
@@ -18,7 +18,7 @@
                             <div class="group"> <label for="pass" class="label">Repetir constraseña</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Repeat your password"> </div>
                             <div class="group"> <label for="pass" class="label">Email </label> <input id="pass" type="text" class="input" placeholder="Enter your email address" [(ngModel)]="usuario.mail" name="mail"> </div>
                             <div class="group"> <label for="validationServer04" class="form-label">Rol</label>
-                                <select class="form-select " id="validationServer04" [(ngModel)]="selectedRol" name="rol" aria-describedby="validationServer04Feedback" required>
+                                <select class="form-select " id="validationServer04" [(ngModel)]="usuario.roleId" name="rol" aria-describedby="validationServer04Feedback" required>
                                     <option selected disabled value="">Choose...</option>
                                     <option *ngFor="let item of roles">{{item.nombre}}</option>
                                 </select>
@@ -26,7 +26,7 @@
                                     Por favor seleccione un Rol.
                                 </div>
                             </div>
-                            <div class="group"> <input type="submit" class="button" value="Sign Up"> </div>
+                            <div class="group"> <button type="button" class="button" value="Sign Up" (click)="registro()">Confirmar</button> </div>
                             <div class="hr"></div>
                             <div class="foot"> <label for="tab-1">Already Member?</label> </div>
                         </div>

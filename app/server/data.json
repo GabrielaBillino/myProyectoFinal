@@ -109,6 +109,20 @@
       "roleId": 1,
       "mail": "tobby@gmail.com",
       "password": "tobby"
+    },
+    {
+      "id": 3,
+      "nombre": "lolo",
+      "roleId": 2,
+      "mail": "yanilanusse@gmail.com",
+      "password": "lolo"
+    },
+    {
+      "id": 5,
+      "nombre": "test",
+      "roleId": 1,
+      "mail": "test@gmail.com",
+      "password": "test"
     }
   ],
   "role": [
@@ -133,6 +147,46 @@
       "nombre": "Tobby",
       "mail": "tobby@gmail.com",
       "mje": "guau- guau"
+    }
+  ],
+  "login": [
+    {
+      "id": 1,
+      "nombre": "Gabriela",
+      "password": "pepe"
+    },
+    {
+      "id": 2,
+      "nombre": "lolo",
+      "password": "lolo"
+    },
+    {
+      "id": 3,
+      "nombre": "lolo",
+      "password": "lolo"
+    },
+    {
+      "id": 4,
+      "nombre": "lolo",
+      "password": "lolo"
+    }
+  ],
+  "cliente": [
+    {
+      "id": 1,
+      "nombre": "",
+      "direccion": "",
+      "mail": "",
+      "telefono": 0,
+      "formaPago": ""
+    }
+  ],
+  "pedido": [
+    {
+      "id": 1,
+      "clienteId": 1,
+      "carritoId": 1,
+      "listado_item": []
     }
   ]
 }
