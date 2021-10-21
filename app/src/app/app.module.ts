@@ -29,6 +29,7 @@ import { ClienteComponent } from './gestion/clientes/cliente/cliente.component';
 import { ListadoClientesComponent } from './gestion/clientes/listado-clientes/listado-clientes.component';
 import { PedidoComponent } from './carrito/pedido/pedidoComponentes/pedido/pedido.component';
 import { ListadoPedidoComponent } from './carrito/pedido/pedidoComponentes/listado-pedido/listado-pedido.component';
+import { ItemOrdenComponent } from './carrito/pedido/item/item-orden/item-orden.component';
 
 
 
@@ -58,7 +59,8 @@ import { ListadoPedidoComponent } from './carrito/pedido/pedidoComponentes/lista
     ClienteComponent,
     ListadoClientesComponent,
     PedidoComponent,
-    ListadoPedidoComponent
+    ListadoPedidoComponent,
+    ItemOrdenComponent
    
  
   ],

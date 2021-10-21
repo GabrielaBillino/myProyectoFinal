@@ -29,8 +29,9 @@
                         <td>{{user.nombre}}</td>
                         <td>{{user.mail}}</td>
                         <td>{{user.password}}</td>
-                        <td>{{user.roleId}}</td>
-                        <td><button class="btn " name="eliminar " (click)="eliminarUser(user.id)" style="background-color: rgb(223, 199, 245); margin-right: 10px; ">Eliminar</button>
+                        <td *ngIf="user.roleId===1">Admin</td>
+                        <td *ngIf="user.roleId===2">Usuario </td>
+                        <td><button class="btn " name="eliminar" (click)="eliminarUser(user.id)" style="background-color: rgb(223, 199, 245); margin-right: 10px; ">Eliminar</button>
                             <button class="btn " name="editar" (click)="openUser(user)" style="background-color: rgb(223, 199, 245); margin-right: 10px;">Editar</button></td>
                     </tr>
                 </tbody>

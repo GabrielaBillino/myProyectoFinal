@@ -41,11 +41,18 @@ export class UsuariosComponent implements OnInit {
       this.title ="Alta - Usuario";
     }else{
       this.title = "Editar - Usuario";
-      this.selectedRole = this.roles.filter((item:any) =>{
-        return item.id === this.user.roleId;
-      })[0].nombre;
+      if (this.user.roleId === 1){
+        this.selectedRole = "Admin"        
+      }else{
+        this.selectedRole ="Usuario"
+      }    
+     
+      // this.selectedRole = this.roles.filter((response:any) =>{
+      //   return response.id === this.user.roleId;
+      // })[0].nombre;      
     }
   }
+  
   changeRole(){
     for (let index = 0; index < this.roles.length; index++) {
       if (this.roles[index].nombre === this.selectedRole) {

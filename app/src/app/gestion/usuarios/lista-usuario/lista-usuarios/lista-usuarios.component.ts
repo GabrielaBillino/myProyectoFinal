@@ -34,9 +34,9 @@ export class ListaUsuariosComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getUser().subscribe(response=> {
       this.usuarios = response;
-      this.backup= this.usuarios; 
+      this.backup= this.usuarios;     
+    })
     
-      })
 
   }
   

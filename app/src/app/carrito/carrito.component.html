@@ -7,16 +7,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let producto of cartProduct ">
+                <tr *ngFor="let producto of cartProduct">
                     <td><img [src]="producto.imagen " style="width:100px; height:100px; "></td>
                     <td>{{producto.nombre}}</td>
                     <td>${{producto.precio}}</td>
                     <td>
-                        <a (click)="sumarCantidad(producto) " class="btn btn-danger ">+</a>
+                        <a (click)="sumarCantidad(producto)" class="btn btn-danger ">+</a>
                         <input type="text " [value]="producto.cantidad " style="width: 35px; margin: 2px 5px; text-align: center; ">
                         <a (click)="restarCantidad(producto) " class="btn btn-danger ">-</a>
                     </td>
-                    <td><button class="btn " name="eliminar " (click)="eliminar(producto) " style="background-color: rgb(223, 199, 245); margin-right: 10px; ">Eliminar</button></td>
+                    <td><button class="btn " name="eliminar" (click)="eliminar(producto) " style="background-color: rgb(223, 199, 245); margin-right: 10px; ">Eliminar</button></td>
                 </tr>
             </tbody>
             <tfoot>

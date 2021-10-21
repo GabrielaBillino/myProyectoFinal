@@ -114,15 +114,15 @@
       "id": 3,
       "nombre": "lolo",
       "roleId": 2,
-      "mail": "yanilanusse@gmail.com",
+      "mail": "yanilanusse@hotmail.com",
       "password": "lolo"
     },
     {
-      "id": 5,
-      "nombre": "test",
-      "roleId": 1,
-      "mail": "test@gmail.com",
-      "password": "test"
+      "id": 4,
+      "nombre": "Marisa",
+      "roleId": 2,
+      "mail": "marisa@gmail.com",
+      "password": "marisa"
     }
   ],
   "role": [
@@ -186,7 +186,27 @@
       "id": 1,
       "clienteId": 1,
       "carritoId": 1,
-      "listado_item": []
+      "listado_item": [
+        {}
+      ]
+    }
+  ],
+  "item_orden": [
+    {
+      "id": 1,
+      "nombre": "Buzo Rosa",
+      "imagen": "assets/img/buzoManchadoRosa.jpg",
+      "precio": 750,
+      "categoriaId": 3,
+      "cantidad": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Pantalón Negro",
+      "imagen": "assets/img/pantalonNegro.jpg",
+      "precio": 2000,
+      "categoriaId": 2,
+      "cantidad": 4
     }
   ]
 }

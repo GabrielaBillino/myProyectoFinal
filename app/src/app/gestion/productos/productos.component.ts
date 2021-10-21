@@ -18,7 +18,7 @@ export class ProductosComponentR implements OnInit {
   id=0;
   backup:any;
   title="";
-  // archivos : any = [];
+  
   vestimenta={
     "id": 0,
     "nombre": "",

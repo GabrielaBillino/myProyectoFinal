@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
+import { ServItemOrdenService } from './pedido/item/serv-item-orden.service';
 
 @Component({
   selector: 'app-carrito',
@@ -20,7 +21,12 @@ export class CarritoComponent implements OnInit {
   products: string[] = []
   cartProduct : any = []
 
-  constructor() { }
+  itemCarrito={
+     "vestimentaId":0,
+     "cantidad":0,
+     "total":0
+  }
+  constructor(private itemOrdenService: ServItemOrdenService) { }
 
   ngOnInit(): void {
     this.products = Object.keys(sessionStorage);
@@ -103,7 +109,13 @@ export class CarritoComponent implements OnInit {
 
   finalizarCompra(){
     console.log("catProduct", this.cartProduct);
-    
+    this.itemCarrito.cantidad = this.cartProduct.cantidad;
+    this.itemCarrito.total = this.cartProduct.total;
+    this.itemCarrito = this.cartProduct;
+    console.log("itemCarrito", this.itemCarrito);
+    this.itemOrdenService.postItemOrden(this.itemCarrito).subscribe((result:any)=>{
+
+    })
     // this.total = 0;
     // this.monto = 0;
     // this.cartProduct = [];
