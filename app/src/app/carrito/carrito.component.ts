@@ -26,6 +26,8 @@ export class CarritoComponent implements OnInit {
      "cantidad":0,
      "total":0
   }
+  backup: any;
+  itemOrden: any;
   constructor(private itemOrdenService: ServItemOrdenService) { }
 
   ngOnInit(): void {
@@ -108,14 +110,30 @@ export class CarritoComponent implements OnInit {
   }
 
   finalizarCompra(){
-    console.log("catProduct", this.cartProduct);
+    
+    
     this.itemCarrito.cantidad = this.cartProduct.cantidad;
     this.itemCarrito.total = this.cartProduct.total;
     this.itemCarrito = this.cartProduct;
-    console.log("itemCarrito", this.itemCarrito);
-    this.itemOrdenService.postItemOrden(this.itemCarrito).subscribe((result:any)=>{
 
-    })
+    if (this.cartProduct.length > 0) {
+      for (let i = 0; i < this.cartProduct.length; i++) {
+        this.itemOrdenService.postItemOrden(this.cartProduct[i]).subscribe((result:any)=>{
+          this.itemOrden = result;
+          this.backup=this.itemOrden;
+          console.log("itemOrden finalizar!!", this.itemOrden);
+        })
+      }
+    }else{
+      this.itemOrdenService.postItemOrden(this.cartProduct).subscribe((result:any)=>{
+        this.itemOrden = result;
+        this.backup=this.itemOrden;
+        console.log("itemOrden finalizar uno solo!!", this.itemOrden);
+      })
+    }
+    
+  
+   
     // this.total = 0;
     // this.monto = 0;
     // this.cartProduct = [];

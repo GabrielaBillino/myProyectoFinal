@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { UserServService } from '../../usuarios/servicio/user-serv.service';
+import { ClienteService } from '../serv/cliente.service';
 
 @Component({
   selector: 'app-cliente',
@@ -9,15 +9,30 @@ import { UserServService } from '../../usuarios/servicio/user-serv.service';
 })
 export class ClienteComponent implements OnInit {
   backup:any;
-  usuarios : any;
-  constructor(private userService: UserServService) { }
+  cliente=
+        {"id": 0,
+        "nombre": "",
+        "direccion": "",
+        "mail": "",
+        "telefono": 0,
+        "formaPago": ""}
+  clientes:any;
+  constructor(private clienteService: ClienteService) { }
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe(response=> {
-      this.usuarios = response;
-      this.backup= this.usuarios; 
+    // this.clienteService.getCliente().subscribe(response=> {
+    //   this.cliente = response;
+    //   this.backup= this.cliente; 
     
-      })
+    //   })
+
+  }
+  finalizarPedido(){
+    console.log("clientes", this.cliente);
+    this.clienteService.postCliente(this.cliente).subscribe(response=> {
+      this.clientes = response;
+      this.backup= this.clientes;
+    })
   }
 
 }

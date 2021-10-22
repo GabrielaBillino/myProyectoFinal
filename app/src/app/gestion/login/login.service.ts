@@ -13,9 +13,9 @@ export class LoginService {
     return this._http.post(this.url,userLogin);
   }
 
-  // isLogin(){
-  //   return this.usuario.nombre.length > 0 && this.usuario.password.length > 0;
-  // }
+  isLogin(){
+    return this.user.nombre.length > 0 && this.user.password.length > 0;
+  }
 
   getLogin(){
     return this._http.get(this.url);

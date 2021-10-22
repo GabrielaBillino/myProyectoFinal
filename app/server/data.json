@@ -169,6 +169,16 @@
       "id": 4,
       "nombre": "lolo",
       "password": "lolo"
+    },
+    {
+      "id": 5,
+      "nombre": "Gabriela",
+      "password": "pepe"
+    },
+    {
+      "id": 6,
+      "nombre": "Gabriela",
+      "password": "pepe"
     }
   ],
   "cliente": [
@@ -179,6 +189,22 @@
       "mail": "",
       "telefono": 0,
       "formaPago": ""
+    },
+    {
+      "id": 2,
+      "nombre": "Gabriela Billino",
+      "direccion": "fgfd",
+      "mail": "yanilanusse@gmail.com",
+      "telefono": "444",
+      "formaPago": ""
+    },
+    {
+      "id": 3,
+      "nombre": "test",
+      "direccion": "fgfd",
+      "mail": "tobby@gmail.com",
+      "telefono": "5555",
+      "formaPago": "BROU"
     }
   ],
   "pedido": [
@@ -193,6 +219,14 @@
   ],
   "item_orden": [
     {
+      "id": 6,
+      "nombre": "Camisa Print",
+      "imagen": "assets/img/camisasVarias.jpg",
+      "precio": 800,
+      "categoriaId": 1,
+      "cantidad": 1
+    },
+    {
       "id": 1,
       "nombre": "Buzo Rosa",
       "imagen": "assets/img/buzoManchadoRosa.jpg",
@@ -206,7 +240,31 @@
       "imagen": "assets/img/pantalonNegro.jpg",
       "precio": 2000,
       "categoriaId": 2,
-      "cantidad": 4
+      "cantidad": 1
+    },
+    {
+      "id": 4,
+      "nombre": "Pantalón Mostaza",
+      "imagen": "assets/img/pantalonMostaza.jpg",
+      "precio": 1000,
+      "categoriaId": 2,
+      "cantidad": 1
+    },
+    {
+      "id": 3,
+      "nombre": "Jean Dama",
+      "imagen": "assets/img/jeanBuzo.jpg",
+      "precio": 1500,
+      "categoriaId": 2,
+      "cantidad": 1
+    },
+    {
+      "id": 9,
+      "nombre": "Camisa new age",
+      "imagen": "assets/img/camisaDupla.jpg",
+      "precio": 750,
+      "categoriaId": 1,
+      "cantidad": 1
     }
   ]
 }

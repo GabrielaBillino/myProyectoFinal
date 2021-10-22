@@ -13,9 +13,8 @@ import { LoginService } from 'src/app/gestion/login/login.service';
 export class MenuComponent implements OnInit {
   router:any;
   backupLogin:any;
-  nombreLogueado="";
   logins:any;
-  usuariosLog: string[] = []
+  
  
  
   constructor(private modalService: NgbModal, public loginService: LoginService) {
@@ -28,20 +27,7 @@ export class MenuComponent implements OnInit {
       this.logins= this.backupLogin;
     }); 
     console.log(this.loginService.getUser())
-    // this.usuariosLog = Object.keys(sessionStorage);
-  
-    // this.usuariosLog.forEach((el:any)  => {
-    //   const item = sessionStorage.getItem(el);
-    //   console.log("item session!!", item)
-    //   if (item !== null) {
-    //     let obj = JSON.parse(item);
-    //     this.nombreLogueado = obj[0].nombre;
-    //   }
-    //   if (this.nombreLogueado !== null) {
-    //     this.islogin=true;
-    //   }
-    // });
-    
+   
   }
   openNewTab() {
     const url = this.router.serializeUrl(
@@ -59,19 +45,7 @@ export class MenuComponent implements OnInit {
     const modalRef = this.modalService.open(CarritoComponent, { size: 'xl' });
   }
 
-  // getNombre(){
-   
-  //     console.log("Soy los logins nombre", this.logins[0].nombre);
-   
-  //   return this.logins[0].nombre;
-  // }
   
-
-  // isLogin(){
-  //   this.nombreLogueado=this.getNombre();
-  //  return this.nombreLogueado.length >0;
-  // }
- 
 
  
 }

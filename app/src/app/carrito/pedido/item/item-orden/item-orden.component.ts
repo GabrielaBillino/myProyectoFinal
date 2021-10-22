@@ -17,6 +17,7 @@ export class ItemOrdenComponent implements OnInit {
   total = 0;
   items:any;
   backup:any;
+  itemsTemp:any;
   constructor(private itemOrdenService : ServItemOrdenService) { }
 
   ngOnInit(): void {
@@ -25,14 +26,15 @@ export class ItemOrdenComponent implements OnInit {
       this.backup= this.items; 
       console.log("items", this.items);
 
+     
       for (let index = 0; index < this.items.length; index++) {
         this.total += this.items[index].cantidad * this.items[index].precio;
       }  
        
     });
     
-
-      
+  
+    
     
   }
 

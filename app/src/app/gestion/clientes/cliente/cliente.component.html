@@ -4,32 +4,35 @@
         <div class="col-6" style="border: 1px solid; width: 95%; ">
             <div class="col-6">
                 <label for="inputEmail4 " class="form-label ">Nombre</label>
-                <input type="text " class="form-control " id="inputNombre " name="nombre">
+                <input type="text " class="form-control " id="inputNombre " [(ngModel)]="cliente.nombre" name="nombre">
             </div>
             <div class="mb-3">
                 <label for="formFile" class="form-label">Mail </label>
-                <input type="mail " class="form-control " id="inputMail" name="mail">
+                <input type="mail " class="form-control " id="inputMail" [(ngModel)]="cliente.mail" name="mail">
 
             </div>
             <div class="col-10">
                 <label for="inputAddress " class="form-label ">Direccion</label>
-                <input type="text" class="form-control " id="inputPass" name="pass">
+                <input type="text" class="form-control " id="inputPass" [(ngModel)]="cliente.direccion" name="direccion">
             </div>
             <div class="col-6">
                 <label for="inputAddress " class="form-label ">Telfono</label>
-                <input type="text" class="form-control " id="inputPass" name="pass">
+                <input type="text" class="form-control " id="inputPass" [(ngModel)]="cliente.telefono" name="telefono">
             </div>
             <div class="col-6">
                 <label for="validationServer04" class="form-label">Forma de pago</label>
-                <select class="form-select " id="validationServer04" name="role" aria-describedby="validationServer04Feedback" required>
+                <select class="form-select " id="validationServer04" name="pago" [(ngModel)]="cliente.formaPago" aria-describedby="validationServer04Feedback" required>
                     <option selected disabled value="">Choose...</option>
-                    <!-- <option *ngFor="let item of roles">{{item.nombre}}</option> -->
+                    <option>OCA</option>
+                    <option>VISA</option>
+                    <option>MASTER</option>
+                    <option>BROU</option>
                 </select>
                 <div id="validationServer04Feedback" class="invalid-feedback">
                     Por favor seleccione un role.
                 </div>
             </div>
-
+            <button class="btn" style="background-color: rgb(223, 199, 245);" (click)="finalizarPedido()">Confirmar Pedido</button>
         </div>
 
     </form>
