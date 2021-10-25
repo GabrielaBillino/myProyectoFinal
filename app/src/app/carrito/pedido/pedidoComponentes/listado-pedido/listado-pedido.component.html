@@ -1,1 +1,29 @@
-<p>listado-pedido works!</p>
+<div class="container" style="margin-top: 40px;">
+    <div class="row">
+        <div class="col-6">
+            <form class="d-flex">
+                <h4>Gestion - Pedidos</h4>
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-8">
+            <table class="table table-danger" style="border: 1px solid;">
+                <thead>
+                    <th scope="col" *ngFor="let item of columnas">{{item}}</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let pedido of pedidos">
+                        <td>#{{pedido.id}}</td>
+                        <td>{{pedido.clienteId}}</td>
+                        <td>{{pedido.fchEntrega}}</td>
+
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

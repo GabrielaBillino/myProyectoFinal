@@ -1,3 +1,4 @@
+import { ListadoPedidoComponent } from './carrito/pedido/pedidoComponentes/listado-pedido/listado-pedido.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: 'gestion/nuevo-producto', component: ProductosComponentR},
   {path: '***', component: Error404Component},
   {path: 'login', component: LoginComponent},
-  {path: 'check-out', component: CheckOutComponent}  
+  {path: 'check-out', component: CheckOutComponent},
+  {path: 'gestion/lista-pedidos', component: ListadoPedidoComponent}  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
