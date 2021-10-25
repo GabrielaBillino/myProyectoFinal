@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 import { ServItemOrdenService } from './pedido/item/serv-item-orden.service';
 
+
 @Component({
   selector: 'app-carrito',
   templateUrl: './carrito.component.html',
@@ -28,6 +29,7 @@ export class CarritoComponent implements OnInit {
   }
   backup: any;
   itemOrden: any;
+
   constructor(private itemOrdenService: ServItemOrdenService) { }
 
   ngOnInit(): void {
@@ -85,8 +87,8 @@ export class CarritoComponent implements OnInit {
 
   eliminar(producto: any){
     Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: '¿Estás seguro?',
+      text: "Los cambios no se van a revertir!",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -109,9 +111,7 @@ export class CarritoComponent implements OnInit {
     })
   }
 
-  finalizarCompra(){
-    
-    
+  finalizarCompra(){   
     this.itemCarrito.cantidad = this.cartProduct.cantidad;
     this.itemCarrito.total = this.cartProduct.total;
     this.itemCarrito = this.cartProduct;
@@ -120,27 +120,16 @@ export class CarritoComponent implements OnInit {
       for (let i = 0; i < this.cartProduct.length; i++) {
         this.itemOrdenService.postItemOrden(this.cartProduct[i]).subscribe((result:any)=>{
           this.itemOrden = result;
-          this.backup=this.itemOrden;
-          console.log("itemOrden finalizar!!", this.itemOrden);
+          this.backup=this.itemOrden;        
         })
       }
     }else{
       this.itemOrdenService.postItemOrden(this.cartProduct).subscribe((result:any)=>{
         this.itemOrden = result;
-        this.backup=this.itemOrden;
-        console.log("itemOrden finalizar uno solo!!", this.itemOrden);
+        this.backup=this.itemOrden;       
       })
-    }
-    
-  
+    }     
    
-    // this.total = 0;
-    // this.monto = 0;
-    // this.cartProduct = [];
-    // this.products.forEach((el:any)  => {
-    //   sessionStorage.removeItem(el);
-    // });
-    // this.products = [];
     
   }
 

@@ -6,10 +6,10 @@ import { Injectable } from '@angular/core';
 })
 export class ClienteService {
   url = "http://localhost:3000/cliente";
-
+  client:any;
   constructor(private _http: HttpClient) { }
 
-  getCliente(){
+  getClientes(){
     return this._http.get(this.url);
   }
 
@@ -24,5 +24,11 @@ export class ClienteService {
   putCliente(cliente:any){
     return this._http.put(this.url+"/"+cliente.id,cliente);
   }
+  getCliente(){
+    return this.client;
+  }
 
+  setCliente(client:any){
+    this.client = client;
+  }
 }

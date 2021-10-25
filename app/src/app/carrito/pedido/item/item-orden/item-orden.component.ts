@@ -24,9 +24,7 @@ export class ItemOrdenComponent implements OnInit {
     this.itemOrdenService.getItemOrden().subscribe((itemOrden:any)=>{
       this.items = itemOrden;
       this.backup= this.items; 
-      console.log("items", this.items);
-
-     
+          
       for (let index = 0; index < this.items.length; index++) {
         this.total += this.items[index].cantidad * this.items[index].precio;
       }  
