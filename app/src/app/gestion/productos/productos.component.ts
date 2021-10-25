@@ -78,28 +78,55 @@ export class ProductosComponentR implements OnInit {
     this.vestimenta.imagen = "assets/img/"+event.target.files[0].name;
       
   }
+
+  isValid(){
+    let valid = true;
+    if(this.vestimenta.nombre.length === 0){
+      this.nombre_valid = "is-invalid";
+      valid = false;
+    }
+    if(this.vestimenta.precio === 0){
+      this.precio_valid = "is-invalid";
+      valid = false;
+    }
+    if(this.selectedCategoria === ""){
+      this.categoria_valid =  "is-invalid";
+      valid = false;
+    }
+    
+    return valid;
+  }
   guardar(){
-    if(this.vestimenta.id ===0){     
-      this.vestimentaService.postVestimenta(this.vestimenta).subscribe(data =>{
-        Swal.fire({
-          position: 'top-end',
-          icon: 'success',
-          title: 'Se creó correctamente',
-          showConfirmButton: false,
-          timer: 1700
+    console.log("Vestiementa guardar", this.vestimenta)
+    if(this.isValid()){
+      if(this.vestimenta.id ===0){     
+        this.vestimentaService.postVestimenta(this.vestimenta).subscribe(data =>{
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Se creó correctamente',
+            showConfirmButton: false,
+            timer: 1700
+          })
         })
-      })
+      }else{
+        this.vestimentaService.putVestimenta(this.vestimenta).subscribe(response =>{
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Se modificó correctamente',
+            showConfirmButton: false,
+            timer: 1700
+          })
+        })
+      }
     }else{
-      this.vestimentaService.putVestimenta(this.vestimenta).subscribe(response =>{
-        Swal.fire({
-          position: 'top-end',
-          icon: 'success',
-          title: 'Se modificó correctamente',
-          showConfirmButton: false,
-          timer: 1700
-        })
-      })
-    }  
+      Swal.fire(
+        'Todos los campos son obligatorios',
+        'success'
+      );
+    }
+     
   }
 
  

@@ -77,16 +77,8 @@
       "nombre": "Pantalon Nube",
       "imagen": "assets/img/pantalonNube.jpg",
       "precio": 900,
-      "categoriaId": 0,
+      "categoriaId": 2,
       "cantidad": 1
-    },
-    {
-      "id": 11,
-      "nombre": "",
-      "imagen": "",
-      "precio": 0,
-      "categoriaId": 0,
-      "cantidad": 0
     }
   ],
   "categoria": [
@@ -154,37 +146,32 @@
     {
       "id": 1,
       "nombre": "Gabriela",
-      "password": "pepe"
+      "password": "pepe",
+      "roleId": 1
     },
     {
       "id": 2,
-      "nombre": "lolo",
-      "password": "lolo"
+      "nombre": "Gabriela",
+      "password": "pepe",
+      "roleId": 1
     },
     {
       "id": 3,
       "nombre": "Gabriela",
-      "password": "pepe"
+      "password": "pepe",
+      "roleId": 1
     },
     {
       "id": 4,
-      "nombre": "lolo",
-      "password": "lolo"
+      "nombre": "Gabriela",
+      "password": "pepe",
+      "roleId": 1
     },
     {
       "id": 5,
       "nombre": "Gabriela",
-      "password": "pepe"
-    },
-    {
-      "id": 6,
-      "nombre": "Gabriela",
-      "password": "pepe"
-    },
-    {
-      "id": 7,
-      "nombre": "Gabriela",
-      "password": "pepe"
+      "password": "pepe",
+      "roleId": 1
     }
   ],
   "cliente": [
@@ -202,6 +189,14 @@
       "direccion": "san fructuoso 1333",
       "mail": "gabrielabillino@gmail.com",
       "telefono": "5555555",
+      "formaPago": "BROU"
+    },
+    {
+      "id": 3,
+      "nombre": "Gabriela",
+      "direccion": "san fructuoso 1333",
+      "mail": "gabrielabillino@gmail.com",
+      "telefono": "55555",
       "formaPago": "BROU"
     }
   ],
@@ -229,6 +224,14 @@
       "precio": 750,
       "categoriaId": 3,
       "cantidad": 1
+    },
+    {
+      "id": 5,
+      "nombre": "Buzo Cool",
+      "imagen": "assets/img/buzosVarios.jpg",
+      "precio": 800,
+      "categoriaId": 3,
+      "cantidad": 2
     }
   ],
   "pedido": [
@@ -267,6 +270,45 @@
           "precio": 750,
           "categoriaId": 3,
           "cantidad": 1
+        }
+      ],
+      "fchEntrega": "15/11/21"
+    },
+    {
+      "id": 2,
+      "clienteId": 3,
+      "item_orden": [
+        {
+          "id": 0,
+          "nombre": "",
+          "imagen": "",
+          "precio": 0,
+          "categoriaId": 1,
+          "cantidad": 1
+        },
+        {
+          "id": 3,
+          "nombre": "Jean Dama",
+          "imagen": "assets/img/jeanBuzo.jpg",
+          "precio": 1500,
+          "categoriaId": 2,
+          "cantidad": 2
+        },
+        {
+          "id": 1,
+          "nombre": "Buzo Rosa",
+          "imagen": "assets/img/buzoManchadoRosa.jpg",
+          "precio": 750,
+          "categoriaId": 3,
+          "cantidad": 1
+        },
+        {
+          "id": 5,
+          "nombre": "Buzo Cool",
+          "imagen": "assets/img/buzosVarios.jpg",
+          "precio": 800,
+          "categoriaId": 3,
+          "cantidad": 2
         }
       ],
       "fchEntrega": "15/11/21"

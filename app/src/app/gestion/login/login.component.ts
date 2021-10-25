@@ -28,7 +28,8 @@ export class LoginComponent implements OnInit {
   userLogin={
     "id": 0,
     "nombre": "",
-    "password": ""
+    "password": "",
+    "roleId":0
   }
   nombreLogueado="";
   constructor(private userService: UserServService, private modalService: NgbModal, private roleService: RolesService, private loginService: LoginService) { 
@@ -38,21 +39,21 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getUser().subscribe((response) => {
       this.usuarios= response;
-      this.backup= this.usuarios;
-      
+      this.backup= this.usuarios;      
     });
-    this.roleService.getRole().subscribe((response:any) => {
-      this.roles= response;
+
+    this.roleService.getRole().subscribe((responseRole:any) => {
+      this.roles= responseRole;
       this.backupRole= this.roles;
       })
   }
   login(){
     let userTemp = this.backup.find((response:any) => response.nombre === this.usuario.nombre && response.password === this.usuario.password);
-    console.log("userTemp", userTemp);  
-    if (userTemp !== null){
-
-        this.userLogin.nombre = this.usuario.nombre;
-        this.userLogin.password = this.usuario.password;
+   //userTemp no es undefined cuando existe el usuario, en caso contrario sale cartel
+    if (userTemp !== undefined){
+        this.userLogin.nombre = userTemp.nombre;
+        this.userLogin.password = userTemp.password;
+        this.userLogin.roleId = userTemp.roleId;
         this.loginService.login(this.userLogin).subscribe(response => {
           this.loginService.setUser(response);
           Swal.fire({
@@ -62,7 +63,7 @@ export class LoginComponent implements OnInit {
             showConfirmButton: false,
             timer: 1700
           })
-          console.log(this.loginService.getUser());
+          
         });
       
       }else{

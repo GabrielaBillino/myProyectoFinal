@@ -45,11 +45,7 @@ export class UsuariosComponent implements OnInit {
         this.selectedRole = "Admin"        
       }else{
         this.selectedRole ="Usuario"
-      }    
-     
-      // this.selectedRole = this.roles.filter((response:any) =>{
-      //   return response.id === this.user.roleId;
-      // })[0].nombre;      
+      }              
     }
   }
   
@@ -87,28 +83,53 @@ export class UsuariosComponent implements OnInit {
       this.pass_valid = "is-invalid";
     }
   }
+
+  isValid(){
+    let valid = true;
+    if(this.user.nombre.length === 0){
+      this.nombre_valid = "is-invalid";
+      valid = false;
+    }
+    if(this.user.mail.length === 0){
+      this.mail_valid = "is-invalid";
+      valid = false;
+    }
+    if(this.selectedRole === ""){
+      this.role_valid =  "is-invalid";
+      valid = false;
+    }
+    
+    return valid;
+  }
   guardar(){
-    if(this.user.id ===0){     
-      this.userService.postUser(this.user).subscribe(data =>{
-        Swal.fire({
-          position: 'top-end',
-          icon: 'success',
-          title: 'Se creó correctamente',
-          showConfirmButton: false,
-          timer: 1700
+    if(this.isValid()){
+      if(this.user.id ===0){     
+        this.userService.postUser(this.user).subscribe(data =>{
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Se creó correctamente',
+            showConfirmButton: false,
+            timer: 1700
+          })
         })
-      })
+      }else{
+        this.userService.putUser(this.user).subscribe(response =>{
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Se modificó correctamente',
+            showConfirmButton: false,
+            timer: 1700
+          })
+        })
+      } 
     }else{
-      this.userService.putUser(this.user).subscribe(response =>{
-        Swal.fire({
-          position: 'top-end',
-          icon: 'success',
-          title: 'Se modificó correctamente',
-          showConfirmButton: false,
-          timer: 1700
-        })
-      })
-    }  
+      Swal.fire(
+        'Todos los campos son obligatorios'        
+      );
+    }
+     
   }
 
 }

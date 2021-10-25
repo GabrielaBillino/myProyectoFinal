@@ -15,7 +15,7 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" style="color: white; font-size: 20px;" (click)="open()">Contacto</a>
                 </li>
-                <li class="nav-item dropdown" *ngIf="this.loginService.isLogin()">
+                <li class="nav-item dropdown" *ngIf="this.loginService.getUser().roleId===1">
                     <!-- <li class="nav-item dropdown" *ngIf="isLogin()"> -->
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; font-size: 20px;">
                        Gestión </a>
@@ -32,6 +32,11 @@
                     </ul>
                 </li>
             </ul>
+            <form class="d-flex">
+                <a href="https://www.facebook.com/" target="_blank"><img src="assets/img/facebook.png" alt="Facebook" style="width:32px; height:32px; margin-right: 10px;"></a>
+                <a href="https://www.instagram.com/pigmento_expopaso/?hl=es" target="_blank"><img src="assets/img/instagram.png" alt="Instagram" style="width:32px; height:32px; margin-right: 10px;"></a>
+                <a href="https://twitter.com/?lang=es" target="_blank"><img src="assets/img/twitter.png" alt="Twitter" style="width:32px; height:32px; margin-right: 40px;"></a>
+            </form>
             <div style="color: white; font-size: 20px; margin-right: 40px;">
                 <h5>{{this.loginService.getUser() !== undefined ? this.loginService.getUser().nombre : ''}}</h5>
             </div>

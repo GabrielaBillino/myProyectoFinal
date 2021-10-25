@@ -25,7 +25,7 @@ export class ProductosComponent implements OnInit {
   ngOnInit(): void {
   }
  
-  addItemCarrito(vestimenta:any){
+  addItemCarrito(vestimenta:any){    
     this.cartProduct.id = vestimenta.id;
     this.cartProduct.nombre = vestimenta.nombre;
     this.cartProduct.precio = vestimenta.precio;
