@@ -79,6 +79,14 @@
       "precio": 900,
       "categoriaId": 0,
       "cantidad": 1
+    },
+    {
+      "id": 11,
+      "nombre": "",
+      "imagen": "",
+      "precio": 0,
+      "categoriaId": 0,
+      "cantidad": 0
     }
   ],
   "categoria": [
@@ -152,6 +160,31 @@
       "id": 2,
       "nombre": "lolo",
       "password": "lolo"
+    },
+    {
+      "id": 3,
+      "nombre": "Gabriela",
+      "password": "pepe"
+    },
+    {
+      "id": 4,
+      "nombre": "lolo",
+      "password": "lolo"
+    },
+    {
+      "id": 5,
+      "nombre": "Gabriela",
+      "password": "pepe"
+    },
+    {
+      "id": 6,
+      "nombre": "Gabriela",
+      "password": "pepe"
+    },
+    {
+      "id": 7,
+      "nombre": "Gabriela",
+      "password": "pepe"
     }
   ],
   "cliente": [

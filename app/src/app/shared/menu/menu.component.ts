@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
       this.backupLogin= response;
       this.logins= this.backupLogin;
     }); 
-    console.log(this.loginService.getUser())
+   
    
   }
   openNewTab() {
